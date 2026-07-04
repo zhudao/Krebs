@@ -16,13 +16,6 @@ import {
   getAgentDir,
   createAgentSessionServices,
 } from "@earendil-works/pi-coding-agent";
-import subagentExtension from "../.pi/extensions/subagent/index.js";
-import memoryExtension from "../.pi/extensions/memory/index.js";
-import contextExtension from "../.pi/extensions/compact/index.js";
-import memoryContextExtension from "../.pi/extensions/memory-context/index.js";
-import sessionHistoryExtension from "../.pi/extensions/session-history-rag/index.js";
-import goalConstraintExtension from "../.pi/extensions/goal-constraint/index.js";
-import selfVerificationExtension from "../.pi/extensions/self-verification/index.js";
 import type { Model } from "@earendil-works/pi-ai";
 import { getModel } from "@earendil-works/pi-ai/compat";
 import { join } from "path";
@@ -131,7 +124,6 @@ const createRuntimeFactory: CreateAgentSessionRuntimeFactory = async (
   const resourceLoader = new DefaultResourceLoader({
     cwd,
     agentDir: getAgentDir(),
-    extensionFactories: [subagentExtension as any, memoryExtension as any, contextExtension as any, memoryContextExtension as any, sessionHistoryExtension as any, goalConstraintExtension as any, selfVerificationExtension as any],
     skillsOverride: () => ({ skills, diagnostics: [] }),
     systemPromptOverride: () => systemPrompt,
     noPromptTemplates: true,
