@@ -5,7 +5,7 @@
 [![Build](https://img.shields.io/badge/build-passing-brightgreen)](#)
 [![License](https://img.shields.io/badge/license-MIT-blue)](#)
 
-**Not a coding tool** — any task requiring AI assistance works.
+**An agent focused on attention management**
 
 ---
 
